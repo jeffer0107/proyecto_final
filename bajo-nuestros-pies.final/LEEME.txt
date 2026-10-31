@@ -1,0 +1,24 @@
+BAJO NUESTROS PIES — Autoría: Caperuza
+
+Extraé todo el ZIP y abrí Bajo-Nuestros-Pies/bajo-nuestros-pies.html.
+
+El mapa está dibujado dentro del proyecto en SVG, sin bibliotecas cartográficas ni servicios externos. Funciona sin conexión con los polígonos Georef / IGN y los datos del CSV aportado por el equipo.
+
+Para explorar:
+- Elegí un departamento en el ranking o tocá su polígono.
+- Usá + y − para acercar o alejar, y arrastrá para mover el mapa.
+- Tocá un grupo de puntos para acercarte. Tocá un pozo para abrir su ficha.
+- El filtro por estado actualiza tanto el ranking como el mapa.
+- En teclado, usá las flechas para mover el mapa, +/− para el zoom, Inicio para recentrar y Enter para abrir una ficha o seleccionar un departamento.
+- “Ver todo Neuquén” restablece los filtros y la vista.
+
+Se incluyen 19.657 registros únicos de Neuquén. Hay 21 sin departamento asignado a partir de sus coordenadas; se conservan en “Sin asignar”. Uno no tiene coordenadas utilizables y no se dibuja. Las fuentes y el criterio de agrupación de estados están en las notas al final de la página.
+
+Debajo del mapa, el gráfico muestra las diez operadoras con más pozos de la selección actual. Sus barras se desglosan por los mismos estados y colores que el mapa. Cambiar el departamento o el estado actualiza el gráfico.
+
+
+
+
+
+
+Suelo: dos botones alternan los escenarios con y sin remediación del mismo terreno. Comparación ilustrativa, sin escala temporal. Fuentes al final.

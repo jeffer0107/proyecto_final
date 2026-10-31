@@ -1,0 +1,13 @@
+#descenso{padding-top:72px;row-gap:28px}
+#descenso .opening-story{grid-column:1/-1;max-width:880px;padding:32px 0 52px;text-shadow:0 2px 16px #020c1e}
+.opening-sequence{border-left:1px solid #abc9c56b;padding:4px 0 4px 24px;background:linear-gradient(90deg,#020c1e75,transparent);max-width:620px}
+#descenso .opening-sequence p{font-size:clamp(17px,1.9vw,23px);line-height:1.5;color:#e0e5df;margin:0 0 12px}
+#descenso .opening-sequence p:last-child{margin-bottom:0;color:#bdc9ca}
+#descenso .opening-turn{font-size:clamp(13px,1.6vw,18px);line-height:1.65;letter-spacing:.08em;color:#e8bb83;margin:46px 0 22px;max-width:690px}
+.opening-turn strong{font-weight:500}
+#descenso #opening-question{font-size:clamp(29px,4.1vw,54px);line-height:1.2;font-weight:500;letter-spacing:-.025em;max-width:880px;margin:0 0 30px;color:#f1f1e7;text-wrap:balance}
+.opening-discover{display:inline-flex;gap:20px;align-items:center;color:#bce0d6;font-size:14px;line-height:1.5;text-decoration:none;border-bottom:1px solid #bce0d680;padding:8px 0}
+.opening-discover span{font-size:23px}
+.opening-discover:hover{color:#fff;border-bottom-color:#fff}
+#estados-del-pozo{scroll-margin-top:32px}
+@media(max-width:760px){#descenso{padding-top:40px}.opening-sequence{padding-left:16px}#descenso .opening-story{padding:20px 0 40px}#descenso .opening-turn{margin-top:34px;font-size:13px}#descenso #opening-question{font-size:clamp(27px,7vw,38px)}.opening-discover{font-size:13px}}

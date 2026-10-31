@@ -1,0 +1,25 @@
+#consecuencias #soil-sim-title{font-size:clamp(26px,3.4vw,40px);margin-bottom:18px}
+#consecuencias .rehab-compact{margin:0;overflow:hidden;border:1px solid #b6b49a55;border-radius:12px;background:#0b222bef}
+#consecuencias .rehab-scene{background:#51574a}
+#consecuencias #rehab-landscape{display:block;width:100%;height:auto}
+#consecuencias .rehab-view-controls{display:flex;gap:8px;padding:16px 20px}
+#consecuencias .rehab-view-controls button{font:inherit;font-size:13px;line-height:1.4;padding:11px 20px;border:1px solid #9baf9f66;border-radius:6px;color:#c6d2c6;background:#142d33;cursor:pointer}
+#consecuencias .rehab-view-controls button[aria-pressed="true"]{color:#182d29;background:#d8c6a1;border-color:#d8c6a1}
+#consecuencias .rehab-view-controls button:hover{border-color:#e2c89a}
+#consecuencias .rehab-view-controls button:focus-visible{outline:2px solid #e5b66d;outline-offset:4px}
+#consecuencias .rehab-compact figcaption{padding:11px 20px}
+#consecuencias #rehab-concept-note{font-size:10px;color:#a9bcae;margin:0;line-height:1.5}
+#consecuencias .rehab-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+#consecuencias .rehab-growth{transition:opacity .3s ease,transform .3s ease}
+@media(max-width:520px){#consecuencias .rehab-view-controls{padding:12px;gap:8px}#consecuencias .rehab-view-controls button{flex:1;font-size:12px;padding:10px 8px}}
+@media(prefers-reduced-motion:reduce){#consecuencias .rehab-growth{transition:none;animation:none}}
+#costo-cierre .cost-finale{margin:90px 0 22px;padding:36px 32px 40px;background:linear-gradient(150deg,#0a1c23ed,#142c2cde);border:1px solid #c7b18b66;border-radius:12px;text-align:center;position:relative;box-shadow:0 20px 55px #0004}
+#costo-cierre .cost-finale>svg{display:block;width:65px;height:82px;margin:0 auto 15px;color:#c8b289}
+#costo-cierre .cost-finale-label{display:block;color:#a8b9ac;font:11px/1.5 monospace;text-transform:uppercase;letter-spacing:2px}
+#costo-cierre.cost-summary .cost-finale .cost-closing-question{background:none;border:0;box-shadow:none;padding:0;margin:20px auto 0;max-width:750px;color:#e9dbbf;font-size:clamp(24px,3vw,36px);line-height:1.45}
+
+@media(max-width:650px){#costo-cierre .cost-finale{margin-top:66px;padding:28px 20px 32px}}
+
+#consecuencias .rehab-intro{max-width:780px;font-size:15px;line-height:1.65;color:#c9d3c8;margin:0 0 22px}
+
+#cierre .source-topic{margin-top:22px}#cierre .source-topic h4{font-size:13px;line-height:1.5;font-weight:600;color:#e0c9a4;margin:0 0 8px}#cierre .source-topic p{margin:0 0 8px}

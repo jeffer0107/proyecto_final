@@ -1,0 +1,19 @@
+#descenso .cinematic-intro{position:relative;grid-column:1/-1;max-width:none;width:100%;min-height:75svh;display:flex;align-items:center;justify-content:center;padding:76px 32px 64px;margin-bottom:30px;text-align:center;isolation:isolate}
+.cinematic-intro [hidden]{display:none!important}
+.intro-stage{width:100%;max-width:850px}
+#descenso .intro-line{font-size:clamp(25px,3.7vw,48px);line-height:1.45;color:#eeeae0;margin:0;text-wrap:balance;font-weight:400;text-shadow:0 2px 18px #020c1e}
+.intro-line.intro-turn{color:#e7b477!important;font-size:clamp(25px,3.8vw,48px)!important;letter-spacing:.025em;font-weight:500!important}
+#descenso .cinematic-intro #opening-question{font-size:clamp(31px,4.5vw,62px);line-height:1.25;letter-spacing:-.02em;color:#f1e6d5;max-width:850px;margin:0;text-wrap:balance}
+.intro-reveal h2{font-size:clamp(35px,5vw,68px)!important;letter-spacing:.075em!important;line-height:1.15!important;margin:0 0 20px!important;color:#f3eee1}
+.intro-subtitle{font-size:clamp(18px,2.4vw,28px);color:#deb687;margin:0 0 24px}
+.intro-tagline{font-size:14px;color:#c7d1cf;margin:0 0 26px}
+.intro-skip{position:absolute;right:0;top:16px;font-size:11px;color:#d0d6cf;border-bottom:1px solid #d0d6cf70;padding:9px 0}
+.intro-depth{position:absolute;left:0;top:28%;bottom:25%;width:1px;background:linear-gradient(transparent,#dfa966,transparent);opacity:0;transition:opacity .7s}
+.intro-depth span{position:absolute;bottom:0;left:-7px;color:#dfa966}
+.cinematic-intro.below-ground .intro-depth{opacity:.8}
+.intro-stage.entering{animation:intro-appear .7s ease both}
+@keyframes intro-appear{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
+.cinematic-intro .opening-discover{padding:12px 18px;border:1px solid #d6a46680;border-radius:3px;color:#edd0aa;background:#05132b55;transition:background .2s,box-shadow .2s}
+.cinematic-intro .opening-discover:hover{background:#30281f75;box-shadow:0 0 22px #d6a46620}
+@media(max-width:760px){#descenso .cinematic-intro{padding:70px 8px 50px;min-height:72svh}.intro-skip{right:0}#descenso .cinematic-intro #opening-question{font-size:clamp(28px,7vw,40px)}.intro-reveal h2{font-size:clamp(32px,8vw,45px)!important;letter-spacing:.035em!important}}
+@media(prefers-reduced-motion:reduce){.intro-stage.entering{animation:none}.intro-depth,.cinematic-intro .opening-discover{transition:none}}

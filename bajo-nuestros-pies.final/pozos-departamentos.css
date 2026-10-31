@@ -1,0 +1,80 @@
+#well-data.department-explorer{--dept-line:#73aaad4d;--dept-cyan:#83cdd2;--dept-ink:#e8eee9;--dept-muted:#b9caca}
+#well-data .dept-intro{max-width:700px;color:#d4ded9;font-size:16px;line-height:1.65;margin-bottom:24px}
+.dept-layout{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(270px,1fr);gap:20px;align-items:stretch}
+.dept-map-box,.dept-ranking{background:#081e2bf5;border:1px solid var(--dept-line);border-radius:14px;padding:18px;min-width:0;box-shadow:0 12px 36px #0002}
+.dept-toolbar{display:flex;gap:12px;align-items:center;justify-content:space-between;margin-bottom:14px}
+#well-data .dept-status{font-size:12px;line-height:1.5;color:#bcd7d1;margin:0}
+#well-data .dept-reset{font:inherit;font-size:11px;line-height:1.4;color:#e3eee8;background:#163c46;border:1px solid #79b8bc70;border-radius:6px;padding:10px;cursor:pointer;min-height:42px;flex-shrink:0}
+#well-data .dept-reset:hover{background:#22515c}
+#dept-map{height:600px;width:100%;position:relative;isolation:isolate;z-index:0;background:#061b26;border:1px solid #7db6bc30;border-radius:8px}
+.dept-legend{display:flex;flex-wrap:wrap;gap:10px 16px;margin-top:16px;color:#c4d5d1;font-size:10px;line-height:1.4}
+.dept-legend span{display:flex;gap:6px;align-items:center}
+.dept-legend i{display:inline-block;height:8px;width:8px;border-radius:50%;background:var(--dot);flex:0 0 auto}
+.dept-ranking{display:flex;flex-direction:column;height:746px;box-sizing:border-box}
+#well-data .dept-ranking h3{font-size:18px;line-height:1.4;margin:0 0 6px;color:#e8eee9}
+#well-data .dept-ranking-intro{font-size:11px;line-height:1.5;color:#b9caca;margin:0 0 14px}
+.dept-state-label{display:grid;gap:7px;color:#c7d7d2;font-size:11px;margin-bottom:14px;padding-bottom:16px;border-bottom:1px solid var(--dept-line)}
+#dept-state{width:100%;max-width:none;min-height:42px;border:1px solid #7bb0b065;background:#11313e;color:#e4eee8;font-size:12px;padding:9px;border-radius:5px}
+#dept-list{overflow-y:auto;flex:1;min-height:0;display:flex;flex-direction:column;gap:9px;padding-right:4px;scrollbar-color:#648e91 #102731}
+#well-data .dept-card{font:inherit;display:block;text-align:left;padding:13px 12px;border:1px solid #54818850;border-radius:8px;background:#102b39;cursor:pointer;color:#dce6df;flex:0 0 auto}
+#well-data .dept-card:hover{border-color:#83cdd2;background:#173a48}
+#well-data .dept-card[aria-pressed=true]{background:#20434c;border-color:#e0ad62}
+.dept-card-heading{display:flex;justify-content:space-between;gap:8px;font-size:12px;line-height:1.5}
+.dept-card-heading strong{font-weight:600}
+.dept-card-heading b{color:#83cdd2;font-size:12px;font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
+.dept-card-stats{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:10px;line-height:1.6;color:#bdcbc9;margin-top:8px}
+.dept-card-track{display:block;height:4px;background:#78b3bb1a;margin-top:9px;border-radius:3px;overflow:hidden}
+.dept-card-track i{display:block;height:100%;background:linear-gradient(90deg,#72c6ad,#75b8db,#b29dd3)}
+#well-data .dept-source{font-size:11px;color:#c3d2cb;line-height:1.6;margin:18px 0 0}
+#well-data .dept-source a{color:#a6d4cc}
+#well-data :is(button,select):focus-visible{outline:2px solid #e0ad62;outline-offset:3px}
+@media(max-width:900px){.dept-layout{grid-template-columns:1fr}.dept-ranking{height:490px}#dept-map{height:480px}}
+@media(max-width:520px){.dept-map-box,.dept-ranking{padding:14px}.dept-toolbar{align-items:flex-start;flex-direction:column}.dept-toolbar .dept-reset{align-self:flex-end}#dept-map{height:400px}.dept-card-heading{font-size:13px}.dept-card-stats{font-size:11px}}
+
+#dept-map{background:#102631}
+.dept-card-stats{display:grid;grid-template-columns:1fr 1fr;gap:4px 10px}
+.dept-card-track i{background:#78a6b0}
+
+#dept-map .native-map-svg{display:block;width:100%;height:100%;touch-action:none;user-select:none;cursor:grab;outline-offset:-3px}
+#dept-map .native-map-svg:active{cursor:grabbing}
+#dept-map .native-department{cursor:pointer;stroke-linejoin:round}
+#dept-map .native-department:hover{stroke:#e8d6aa;stroke-width:2}
+#dept-map .native-department:focus-visible{stroke:#f3d393;stroke-width:3;outline:none}
+#dept-map .native-map-point{cursor:pointer;outline:none}
+#dept-map .native-map-point:focus-visible>circle:first-child{stroke:#fff;stroke-width:4}
+#dept-map .native-map-point text{font:600 11px Arial,Helvetica,sans-serif;fill:#f0f6ef;pointer-events:none}
+#dept-map .native-map-controls{position:absolute;top:12px;left:12px;display:grid;gap:1px;border:1px solid #6f9ba36b;border-radius:6px;overflow:hidden;box-shadow:0 2px 8px #0005}
+#dept-map .native-map-controls button{display:grid;place-items:center;width:34px;height:34px;border:0;border-radius:0;background:#173641;color:#e9f0eb;font:22px/1 Arial,sans-serif;cursor:pointer;padding:0}
+#dept-map .native-map-controls button:hover{background:#29515d}
+#dept-map .native-map-help{position:absolute;bottom:10px;right:10px;font:9px/1.4 Arial,sans-serif;color:#9eb7bb;background:#030b12d9;padding:4px 7px;border-radius:4px;pointer-events:none}
+#dept-map .native-map-scale{position:absolute;bottom:12px;left:12px;display:grid;gap:3px;color:#c5d9d6;font:10px/1 Arial,sans-serif;pointer-events:none}
+#dept-map .native-map-scale>span:first-child{display:block;border:1px solid #c5d9d6;border-top:0;height:5px}
+#dept-map .native-map-popup{position:absolute;z-index:2;top:14px;right:14px;width:min(305px,calc(100% - 28px));box-sizing:border-box;background:#e5eee7;color:#173b42;border:1px solid #a9c8bc;border-radius:8px;box-shadow:0 8px 28px #0008;padding:20px;max-height:calc(100% - 28px);overflow:auto;font:12px/1.6 Arial,sans-serif}
+#dept-map .native-map-popup[hidden]{display:none}
+#dept-map .native-popup-close{position:absolute;right:8px;top:5px;background:transparent;color:#28525a;border:0;font:25px/1 Arial,sans-serif;padding:3px 5px;cursor:pointer}
+#dept-map .native-popup-body h4{font:700 15px/1.4 Arial,sans-serif;margin:8px 22px 12px 0;color:#185064;overflow-wrap:anywhere}
+#dept-map .native-popup-body div{margin:4px 0;overflow-wrap:anywhere}
+#dept-map .native-popup-picker{display:grid;gap:8px;font-size:11px;padding:12px 0;border-bottom:1px solid #b4cac0}
+#dept-map .native-popup-picker select{width:100%;max-width:none;background:#fff;color:#183b42;border:1px solid #a1bdb1;font-size:11px;border-radius:4px;padding:8px}
+@media(max-width:520px){#dept-map .native-map-help{bottom:8px;right:6px;font-size:8px}#dept-map .native-map-scale{bottom:34px}}
+
+#well-data .operator-chart{margin:22px 0 0;padding:24px;background:#081e2bf5;border:1px solid #73aaad4d;border-radius:14px;box-sizing:border-box}
+#well-data .operator-chart h3{font-size:21px;line-height:1.3;color:#e8eee9;margin:0 0 7px}
+#well-data .operator-chart figcaption p{font-size:12px;line-height:1.5;color:#b9caca;margin:0 0 20px}
+.operator-chart-axis,.operator-chart-row{display:grid;grid-template-columns:minmax(155px,26%) minmax(0,1fr) 58px;gap:14px;align-items:center}
+.operator-chart-axis{margin-bottom:12px;font-size:10px;color:#9ab4b7}
+.operator-chart-axis[hidden]{display:none}
+#operator-chart-ticks{display:flex;justify-content:space-between;gap:6px}
+#operator-chart-bars{display:grid;gap:14px}
+.operator-chart-company{font-size:11px;line-height:1.4;color:#d8e3dd;overflow-wrap:anywhere}
+.operator-chart-track{height:17px;background:repeating-linear-gradient(90deg,#7aa8b21f 0,#7aa8b21f 1px,transparent 1px,transparent 25%);border-left:1px solid #78a6b04d}
+.operator-chart-bar{height:100%;display:flex;border-radius:0 4px 4px 0;overflow:hidden}
+.operator-chart-bar>span{display:block;height:100%;flex-shrink:0}
+.operator-chart-total{font-size:12px;color:#e1e8e0;text-align:right;font-weight:500;font-variant-numeric:tabular-nums}
+.operator-chart-legend{display:flex;flex-wrap:wrap;gap:10px 18px;font-size:10px;line-height:1.4;color:#c4d5d1;margin-top:24px}
+.operator-chart-legend span{display:flex;align-items:center;gap:6px}
+.operator-chart-legend i{width:8px;height:8px;display:inline-block;border-radius:50%;background:var(--dot)}
+#well-data .operator-chart-empty{font-size:13px;color:#c4d5d1;margin:10px 0}
+@media(max-width:600px){#well-data .operator-chart{padding:20px 16px}.operator-chart-row{grid-template-columns:minmax(0,1fr) 48px;gap:7px 10px}.operator-chart-company{grid-column:1/-1;font-size:12px}.operator-chart-track{height:16px}.operator-chart-axis{grid-template-columns:minmax(0,1fr) 48px;gap:10px}.operator-chart-axis>span:first-child{display:none}#operator-chart-bars{gap:17px}.operator-chart-legend{gap:10px 14px}}
+
+#dept-map{background:#030b12;border-color:#42646f}
